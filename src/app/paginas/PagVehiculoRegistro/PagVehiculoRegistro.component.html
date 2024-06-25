@@ -1,0 +1,76 @@
+<div class="card">
+  <div class="card-header">
+    CREACION DE VEHICULOS
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <form  [formGroup]="formulario"> 
+          
+          <div class="mb-4 row">
+            <label for="staticCodigo" class="col-sm-2 col-form-label">Codigo:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="staticCodigo" name="codigo" formControlName="codigo" > 
+              <span class="text-danger" 
+              *ngIf="formulario.controls['codigo'].errors?.['required']">Valor requerido</span><br>
+             
+              
+              <!-- [(ngModel)] = "vehiculo.codigo" permite que el valor se actualice en la vista, bidireccional -->
+            </div>
+          </div>
+         
+          
+          <div class="mb-4 row">
+            <label for="staticAnio" class="col-sm-2 col-form-label">Marca:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticCodigo" name="marca" formControlName="marca" >
+          </div>
+        </div>
+
+        <div class="mb-4 row">
+          <label for="staticCodigo" class="col-sm-2 col-form-label">Modelo:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticCodigo" name="modelo" formControlName="modelo">
+          </div>
+        </div>
+
+          
+        <div class="mb-4 row">
+          <label for="staticColor" class="col-sm-2 col-form-label">Año:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="staticCodigo" name="anio" formControlName="anio" >
+          </div>
+        </div>
+        
+        <div class="mb-4 row">
+          <label for="staticCodigo" class="col-sm-2 col-form-label">Kilometraje:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticCodigo" name="kilometraje" formControlName="kilometraje" >
+          </div>
+        </div>
+
+        <div class="mb-4 row">
+          <label for="staticAnio" class="col-sm-2 col-form-label">Precio:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="staticCodigo" name="precio" formControlName="precio" >
+          </div>
+        </div>
+        
+        <div class="mb-4 row">
+          <label for="staticColor" class="col-sm-2 col-form-label">Calificacion:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="staticCodigo" name="calificacion" formControlName="calificacion">
+          </div>
+        </div>
+      </form>
+
+      </div>
+
+    </div>
+    <div class="row">
+      <button class="btn btn-info" (click)="guardar()">Guardar</button>
+
+    </div>
+
+  </div>
+</div>
